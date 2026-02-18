@@ -16,7 +16,7 @@ except:
 print("Calculating Ratios...")
 
 if 'Total Debt' in df.columns and 'Stockholders Equity' in df.columns:
-    df['Debt_to_Equity'] = df['Total Debt']/df['Interest Expense'].replace(0, np.nan)
+    df['Debt_to_Equity'] = df['Total Debt']/df['Stockholders Equity'].replace(0, np.nan)
     df['Debt_to_Equity'] = df['Debt_to_Equity'].fillna(0)
 
 if 'EBIT' in df.columns and 'Interest Expense' in df.columns:
