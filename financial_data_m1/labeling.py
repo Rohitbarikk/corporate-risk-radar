@@ -24,7 +24,7 @@ df.loc[high_debt | bad_coverage | burning_cash, 'Target'] = 1
 risk_count = df['Target'].sum()
 Total_count = len(df)
 print("Analysis Complete")
-print(f"Risky Companies Idetnified : {risk_count}")
+print(f"Risky Companies Identified : {risk_count}")
 print(f"Safe Companies Identified : {Total_count - risk_count}")
 
 df.to_csv(OUTPUT_FILE, index=False)
