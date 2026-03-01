@@ -53,7 +53,7 @@ def get_financials(ticker_symbol):
 
         ebit = get_value(financials, 'EBIT')
         interest = get_value(financials, 'Interest Expense', default=1)
-        net_income = get_value(financials, 'Net Incocme')
+        net_income = get_value(financials, 'Net Income')
         revenue = get_value(financials, 'Total Revenue', default=1)
 
         data = {
@@ -105,9 +105,9 @@ def predict_risk(company_name):
     
     print("="*40 + "\n")
 
-    if __name__ == "__main__":
-        while True:
-            user_input = input("Enter Company Name (or 'q' to quit): ").strip()
-            if user_input.lower() == 'q':
-                break
-            predict_risk(user_input)
+if __name__ == "__main__":
+    while True:
+        user_input = input("Enter Company Name (or 'q' to quit): ").strip()
+        if user_input.lower() == 'q':
+            break
+        predict_risk(user_input)
